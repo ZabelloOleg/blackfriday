@@ -1,0 +1,75 @@
+#wrapper {
+	position: relative;
+	overflow: hidden;
+}
+
+.container {
+	max-width: 1410px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+.sales-filter {
+	background: radial-gradient(192.45% 192.47% at 50% 128.94%, #FFFFFF 0%, #E9E9E9 100%);
+
+	.container {
+		@include media ('>=tablet') {
+			display: flex;
+			flex-wrap: wrap;
+		}
+	}
+
+	.sidebar-box {
+		@include media ('>=tablet') {
+			max-width: 317px;
+			width: 100%;
+		}
+	}
+
+	.filter-box {
+		@include media ('>=tablet') {
+			width: calc(100% - 317px);
+		}
+	}
+}
+
+.link-list {
+	@extend %listreset;
+
+	display: flex;
+	flex-wrap: wrap;
+
+	@include media ('>=tablet') {
+		margin: 0 -25px;
+	}
+
+	li {
+		@include media ('>=tablet') {
+			width: 50%;
+			padding: 0 20px;
+		}
+
+		@include media ('>=desktop') {
+			width: 33.33%;
+			padding: 0 25px 35px;
+		}
+	}
+
+	a {
+		@include animate(box-shadow);
+
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+		min-height: 114px;
+		background: linear-gradient(180deg, rgba(234, 234, 234, 0) 0%, #F3F3F3 100%), #FFFFFF;
+		box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+		border-radius: 20px;
+		padding: 2px 10px;
+
+		&:hover {
+			box-shadow: 0 7px 7px rgba(0, 0, 0, 0.3);
+		}
+	}
+}

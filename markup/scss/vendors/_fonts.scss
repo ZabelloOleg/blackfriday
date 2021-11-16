@@ -1,0 +1,8 @@
+@import '../base/mixins';
+
+@include font-face(e-Ukraine, e-Ukraine-Thin, 100, normal);
+@include font-face(e-Ukraine, e-Ukraine-UltraLight, 200, normal);
+@include font-face(e-Ukraine, e-Ukraine-Light, 300, normal);
+@include font-face(e-Ukraine, e-Ukraine-Regular, 400, normal);
+@include font-face(e-Ukraine, e-Ukraine-Medium, 500, normal);
+@include font-face(e-Ukraine, e-Ukraine-Bold, 700, normal);
