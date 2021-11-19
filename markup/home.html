@@ -57,43 +57,169 @@
 						<a href="#" class="drop-btn">обрати категорію</a>
 						<form action="#" class="search-form">
 							<input type="search" placeholder="Пошук за назвою магазину">
-							<button><i class="icon-search"></i></button>
+							<button class="btn-search"><i class="icon-search"></i></button>
 						</form>
 						<ul class="sort-list">
-							<li><a href="#">Одяг</a></li>
-							<li><a href="#">Маркет плейс</a></li>
-							<li><a href="#">Техніка</a></li>
-							<li><a href="#">Косметика</a></li>
-							<li><a href="#">Здоров’я</a></li>
-							<li><a href="#">Ювелірні вироби</a></li>
-							<li><a href="#">Продукти</a></li>
-							<li><a href="#" class="active">Книжки</a></li>
-							<li><a href="#">Дозвілля</a></li>
-							<li><a href="#">Побут</a></li>
-							<li><a href="#">Товари для дітей</a></li>
-							<li><a href="#">Товари для спорту</a></li>
-							<li><a href="#">Товари для дорослих</a></li>
+							<li><a data-filter="clothes" href="#">Одяг</a></li>
+							<li><a data-filter="market-place" href="#">Маркет плейс</a></li>
+							<li><a data-filter="appliances" href="#">Техніка</a></li>
+							<li><a data-filter="makeup" href="#">Косметика</a></li>
+							<li><a data-filter="health" href="#">Здоров’я</a></li>
+							<li><a data-filter="jewerly" href="#">Ювелірні вироби</a></li>
+							<li><a data-filter="products" href="#">Продукти</a></li>
+							<li><a data-filter="books" href="#">Книжки</a></li>
+							<li><a data-filter="leisure" href="#">Дозвілля</a></li>
+							<li><a data-filter="everyday-life" href="#">Побут</a></li>
+							<li><a data-filter="goods-for-children" href="#">Товари для дітей</a></li>
+							<li><a data-filter="goods-for-sports" href="#">Товари для спорту</a></li>
+							<li><a data-filter="goods-for-adults" href="#">Товари для дорослих</a></li>
 						</ul>
 					</div>
 					<div class="filter-box">
 						<h2>всі доступні знижки</h2>
 						<ul class="link-list">
-							<li><a href="#"><img src="images/AliExpress.png" alt="image description"></a></li>
-							<li><a href="#"><img src="images/ROZETKA.png" alt="image description"></a></li>
-							<li><a href="#"><img src="images/foxtrot.png" alt="image description"></a></li>
-							<li><a href="#"><img src="images/answear.png" alt="image description"></a></li>
-							<li><a href="#"><img src="images/Citrus.png" alt="image description"></a></li>
-							<li><a href="#"><img src="images/guess.png" alt="image description"></a></li>
-							<li><a href="#"><img src="images/yakaboo.png" alt="image description"></a></li>
-							<li><a href="#"><img src="images/watsons.png" alt="image description"></a></li>
-							<li><a href="#"><img src="images/moyo.png" alt="image description"></a></li>
-							<li><a href="#"><img src="images/Eva.png" alt="image description"></a></li>
-							<li><a href="#"><img src="images/yves-rocher.png" alt="image description"></a></li>
-							<li><a href="#"><img src="images/antoshka.png" alt="image description"></a></li>
-							<li><a href="#" class="telemart"><img src="images/telemart.png" alt="image description"></a></li>
-							<li><a href="#" class="kasta"><img src="images/kasta.png" alt="image description"></a></li>
-							<li><a href="#"><img src="images/nasoloda.png" alt="image description"></a></li>
+							<li data-tags="aliexpress, аліекспрес, алиэкспресс" data-category="appliances, clothes, market-place">
+								<a href="#"><img src="images/AliExpress.png" alt="image description"></a>
+							</li>
+							<li data-tags="розетка, rozetka" data-category="jewerly, appliances, clothes, market-place, products, everyday-life, goods-for-sports">
+								<a href="#"><img src="images/ROZETKA.png" alt="image description"></a>
+							</li>
+							<li data-tags="foxtrot, фокстрот" data-category="appliances">
+								<a href="#"><img src="images/foxtrot.png" alt="image description"></a>
+							</li>
+							<li data-tags="answear" data-category="clothes">
+								<a href="#"><img src="images/answear.png" alt="image description"></a>
+							</li>
+							<li data-tags="сitrus, цитрус" data-category="appliances">
+								<a href="#"><img src="images/Citrus.png" alt="image description"></a>
+							</li>
+							<li data-tags="guess" data-category="clothes">
+								<a href="#"><img src="images/guess.png" alt="image description"></a>
+							</li>
+							<li data-tags="yakaboo, якабу" data-category="books">
+								<a href="#"><img src="images/yakaboo.png" alt="image description"></a>
+							</li>
+							<li data-tags="watsons, ватсонс" data-category="health, makeup">
+								<a href="#"><img src="images/watsons.png" alt="image description"></a>
+							</li>
+							<li data-tags="moyo, мое" data-category="appliances">
+								<a href="#"><img src="images/moyo.png" alt="image description"></a>
+							</li>
+							<li data-tags="eva, ева" data-category="health, makeup">
+								<a href="#"><img src="images/Eva.png" alt="image description"></a>
+							</li>
+							<li data-tags="yves rocher, ив роше" data-category="health, makeup">
+								<a href="#"><img src="images/yves-rocher.png" alt="image description"></a>
+							</li>
+							<li data-tags="antoshka, антошка" data-category="clothes, goods-for-children">
+								<a href="#"><img src="images/antoshka.png" alt="image description"></a>
+							</li>
+							<li data-tags="telemart, телемарт" data-category="appliances">
+								<a href="#" class="telemart"><img src="images/telemart.png" alt="image description"></a>
+							</li>
+							<li data-tags="kasta, каста" data-category="clothes">
+								<a href="#" class="kasta"><img src="images/kasta.png" alt="image description"></a>
+							</li>
+							<li data-tags="nasoloda, насолода" data-category="leisure, goods-for-adults">
+								<a href="#"><img src="images/nasoloda.png" alt="image description"></a>
+							</li>
+							<li data-tags="aliexpress, аліекспрес, алиэкспресс" data-category="appliances, clothes, market-place">
+								<a href="#"><img src="images/AliExpress.png" alt="image description"></a>
+							</li>
+							<li data-tags="розетка, rozetka" data-category="jewerly, appliances, clothes, market-place, products, everyday-life, goods-for-sports">
+								<a href="#"><img src="images/ROZETKA.png" alt="image description"></a>
+							</li>
+							<li data-tags="foxtrot, фокстрот" data-category="appliances">
+								<a href="#"><img src="images/foxtrot.png" alt="image description"></a>
+							</li>
+							<li data-tags="answear" data-category="clothes">
+								<a href="#"><img src="images/answear.png" alt="image description"></a>
+							</li>
+							<li data-tags="сitrus, цитрус" data-category="appliances">
+								<a href="#"><img src="images/Citrus.png" alt="image description"></a>
+							</li>
+							<li data-tags="guess" data-category="clothes">
+								<a href="#"><img src="images/guess.png" alt="image description"></a>
+							</li>
+							<li data-tags="yakaboo, якабу" data-category="books">
+								<a href="#"><img src="images/yakaboo.png" alt="image description"></a>
+							</li>
+							<li data-tags="watsons, ватсонс" data-category="health, makeup">
+								<a href="#"><img src="images/watsons.png" alt="image description"></a>
+							</li>
+							<li data-tags="moyo, мое" data-category="appliances">
+								<a href="#"><img src="images/moyo.png" alt="image description"></a>
+							</li>
+							<li data-tags="eva, ева" data-category="health, makeup">
+								<a href="#"><img src="images/Eva.png" alt="image description"></a>
+							</li>
+							<li data-tags="yves rocher, ив роше" data-category="health, makeup">
+								<a href="#"><img src="images/yves-rocher.png" alt="image description"></a>
+							</li>
+							<li data-tags="antoshka, антошка" data-category="clothes, goods-for-children">
+								<a href="#"><img src="images/antoshka.png" alt="image description"></a>
+							</li>
+							<li data-tags="telemart, телемарт" data-category="appliances">
+								<a href="#" class="telemart"><img src="images/telemart.png" alt="image description"></a>
+							</li>
+							<li data-tags="kasta, каста" data-category="clothes">
+								<a href="#" class="kasta"><img src="images/kasta.png" alt="image description"></a>
+							</li>
+							<li data-tags="nasoloda, насолода" data-category="leisure, goods-for-adults">
+								<a href="#"><img src="images/nasoloda.png" alt="image description"></a>
+							</li>
+							<li data-tags="aliexpress, аліекспрес, алиэкспресс" data-category="appliances, clothes, market-place">
+								<a href="#"><img src="images/AliExpress.png" alt="image description"></a>
+							</li>
+							<li data-tags="розетка, rozetka" data-category="jewerly, appliances, clothes, market-place, products, everyday-life, goods-for-sports">
+								<a href="#"><img src="images/ROZETKA.png" alt="image description"></a>
+							</li>
+							<li data-tags="foxtrot, фокстрот" data-category="appliances">
+								<a href="#"><img src="images/foxtrot.png" alt="image description"></a>
+							</li>
+							<li data-tags="answear" data-category="clothes">
+								<a href="#"><img src="images/answear.png" alt="image description"></a>
+							</li>
+							<li data-tags="сitrus, цитрус" data-category="appliances">
+								<a href="#"><img src="images/Citrus.png" alt="image description"></a>
+							</li>
+							<li data-tags="guess" data-category="clothes">
+								<a href="#"><img src="images/guess.png" alt="image description"></a>
+							</li>
+							<li data-tags="yakaboo, якабу" data-category="books">
+								<a href="#"><img src="images/yakaboo.png" alt="image description"></a>
+							</li>
+							<li data-tags="watsons, ватсонс" data-category="health, makeup">
+								<a href="#"><img src="images/watsons.png" alt="image description"></a>
+							</li>
+							<li data-tags="moyo, мое" data-category="appliances">
+								<a href="#"><img src="images/moyo.png" alt="image description"></a>
+							</li>
+							<li data-tags="eva, ева" data-category="health, makeup">
+								<a href="#"><img src="images/Eva.png" alt="image description"></a>
+							</li>
+							<li data-tags="yves rocher, ив роше" data-category="health, makeup">
+								<a href="#"><img src="images/yves-rocher.png" alt="image description"></a>
+							</li>
+							<li data-tags="antoshka, антошка" data-category="clothes, goods-for-children">
+								<a href="#"><img src="images/antoshka.png" alt="image description"></a>
+							</li>
+							<li data-tags="telemart, телемарт" data-category="appliances">
+								<a href="#" class="telemart"><img src="images/telemart.png" alt="image description"></a>
+							</li>
+							<li data-tags="kasta, каста" data-category="clothes">
+								<a href="#" class="kasta"><img src="images/kasta.png" alt="image description"></a>
+							</li>
+							<li data-tags="nasoloda, насолода" data-category="leisure, goods-for-adults">
+								<a href="#"><img src="images/nasoloda.png" alt="image description"></a>
+							</li>
 						</ul>
+						<div class="loader-holder">
+							<div class="loader">Loading...</div>
+						</div>
+						<div class="result-message">
+							<p>Нажаль нічого не знайдено</p>
+						</div>
 						<a href="#" class="load-more">Показати всі магазини</a>
 					</div>
 				</div>
