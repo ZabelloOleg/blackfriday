@@ -2,9 +2,78 @@
 	background: linear-gradient(8deg, #8961AB -34.79%, #4E3E5C 108.93%);
 	box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
 	color: $white;
+	padding: 21px 0 82px;
+
+	@include media ('>=tablet') {
+		padding: 45px 0 45px;
+	}
+
+	@include media ('>=widescreen') {
+		padding: 98px 0 102px;
+	}
 
 	.container {
 		display: flex;
 		flex-wrap: wrap;
+		align-items: center;
+		justify-content: flex-end;
+	}
+
+	h1 {
+		margin-bottom: 0;
+		max-width: 793px;
+		line-height: 1.2;
+		width: 100%;
+		margin-bottom: 17px;
+
+		@include media ('<tablet') {
+			padding: 0 14px;
+			font-size: 16px;
+			line-height: 1.5;
+		}
+
+		@include media ('>=tablet') {
+			margin-bottom: 20px;
+			text-transform: uppercase;
+		}
+
+		@include media ('>=desktop') {
+			text-align: right;
+			width: calc(100% - 325px);
+			margin-bottom: 0;
+			margin-right: 15px;
+		}
+
+		@include media ('>=widescreen') {
+			width: auto;
+			font-size: 40px;
+			margin-right: 52px;
+		}
+	}
+
+	.btn-tg {
+		background: #AC8BC9;
+		border-radius: 15px;
+		color: $white;
+		text-transform: uppercase;
+		text-align: center;
+		width: 100%;
+		padding: 21px 15px;
+
+		@include media ('>=tablet') {
+			padding: 18px;
+		}
+
+		@include media ('>=desktop') {
+			width: auto;
+			min-width: 305px;
+			display: inline-block;
+			vertical-align: middle;
+			padding: 24px 18px;
+		}
+
+		@include media ('>=widescreen') {
+			margin-right: 175px;
+		}
 	}
 }

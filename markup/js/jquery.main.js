@@ -1,6 +1,14 @@
 jQuery(function() {
 	initFiltering();
+	initAddClasses();
 });
+
+// add class on click
+function initAddClasses() {
+	jQuery('div.drop-holder').clickClass({
+		classAdd: 'popup-active'
+	});
+}
 
 // filtering init
 function initFiltering() {
@@ -16,6 +24,32 @@ function initFiltering() {
 		delay: 300
 	});
 }
+
+/*
+ * Add class plugin
+ */
+jQuery.fn.clickClass = function(opt) {
+	var options = jQuery.extend({
+		classAdd: 'add-class',
+		addToParent: false,
+		event: 'click'
+	}, opt);
+
+	return this.each(function() {
+		var classItem = jQuery(this);
+		if(options.addToParent) {
+			if(typeof options.addToParent === 'boolean') {
+				classItem = classItem.parent();
+			} else {
+				classItem = classItem.parents('.' + options.addToParent);
+			}
+		}
+		jQuery(this).bind(options.event, function(e) {
+			classItem.toggleClass(options.classAdd);
+			e.preventDefault();
+		});
+	});
+};
 
 /* Filtering plugin */
 ;(function($) {
