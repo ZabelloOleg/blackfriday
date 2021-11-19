@@ -15,6 +15,36 @@ a {
 	padding: 0 15px;
 }
 
+.title {
+	text-shadow: 0px 4px 4px rgba(86, 49, 0, 0.1);
+	color: $white;
+	text-transform: uppercase;
+	margin-bottom: 0;
+
+	@include media ('>=widescreen') {
+		font-size: 120px;
+	}
+
+	span {
+		color: #DD7D00;
+	}
+}
+
+.intro {
+	background: radial-gradient(192.45% 192.47% at 50% 128.94%, #FFBD68 0%, #FF940A 100%);
+
+	.subtitle {
+		display: block;
+		color: #B12331;
+		text-transform: uppercase;
+		text-shadow: 0px 2px 2px rgba(199, 112, 0, 0.1);
+
+		@include media ('>=desktop') {
+			font-size: 30px;
+		}
+	}
+}
+
 .sales-filter {
 	// background: radial-gradient(192.45% 192.47% at 50% 128.94%, #FFFFFF 0%, #E9E9E9 100%);
 
@@ -242,4 +272,8 @@ a {
 		border-radius: 0 15px 15px 0;
 		box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.1);
 	}
+}
+
+.newsletter-section {
+	background: radial-gradient(192.45% 192.47% at 50% 128.94%, #FFBD68 0%, #FF940A 100%);
 }
