@@ -74,7 +74,7 @@ function initCookie() {
 
 		form.on('submit', function() {
 			jQuery.cookie('infoPopup', 'true', {
-				expires: expires,
+				expires: 365,
 				path: '/'
 			});
 		});
