@@ -178,11 +178,14 @@ a {
 
 	.filter-box {
 		text-align: center;
+		position: relative;
+		padding-top: 45px;
 
 		@include media(">=tablet") {
 			text-align: left;
 			width: calc(100% - 250px);
 			padding-left: 15px;
+			padding-top: 0;
 		}
 
 		@include media ('>=desktop') {
@@ -194,12 +197,73 @@ a {
 			padding-top: 2px;
 		}
 
+		.delete-filter {
+			@include animate(background-color color opacity visibility);
+
+			position: absolute;
+			top: 0;
+			left: 0;
+			color: #3c2650;
+			font-size: 12px;
+			border: 1px solid #3c2650;
+			padding: 5px 30px 5px 10px;
+			border-radius: 3em;
+			opacity: 0;
+			visibility: hidden;
+
+			@include media ('>=tablet') {
+				top: 50px;
+				left: 15px;
+			}
+
+			@include media ('>=desktop') {
+				top: 65px;
+			}
+
+			@include media ('>=widescreen') {
+				left: 54px;
+			}
+
+			&:before,
+			&:after {
+				@include animate(background-color);
+
+				content: "";
+				position: absolute;
+				top: 50%;
+				right: 10px;
+				width: 13px;
+				height: 1px;
+				background-color: #3c2650;
+				transform: translateY(-50%) rotate(45deg);
+			}
+
+			&:after {
+				transform: translateY(-50%) rotate(-45deg);
+			}
+
+			&:hover {
+				background-color: #3c2650;
+				color: $white;
+
+				&:before,
+				&:after {
+					background-color: $white;
+				}
+			}
+
+			&.active {
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+
 		.desk-title {
 			display: none;
 
 			@include media ('>=tablet') {
 				font-size: 25px;
-				margin-bottom: 15px;
+				margin-bottom: 60px;
 				display: block;
 				color: #3c2650;
 				text-shadow: 0px 4px 4px rgba(66, 45, 85, 0.1);
@@ -406,6 +470,7 @@ a {
 	padding: 13px 0 18px 0;
 	opacity: 0;
 	visibility: hidden;
+	z-index: 5;
 
 	@include media ('>=tablet') {
 		opacity: 1;
@@ -1163,6 +1228,56 @@ a {
 			top: calc(50% - 192px);
 			left: calc(50% + 170px);
 			transform: translate(-50%, -50%);
+		}
+	}
+}
+
+.hot-sale {
+	background: linear-gradient(8deg, #8961AB -34.79%, #4E3E5C 108.93%);
+	box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+	color: $white;
+	padding: 54px 0 69px;
+
+	h2 {
+		text-transform: uppercase;
+		text-shadow: 0px 4px 4px rgba(66, 45, 85, 0.25);
+
+		@include media ('>=desktop') {
+			font-size: 40px;
+			margin-bottom: 40px;
+		}
+	}
+}
+
+.hot-sale-slider {
+	.slick-arrow {
+		color: $white;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		font-size: 41px;
+		background-color: transparent;
+		border: none;
+
+		@include media ('>=desktop') {
+			left: -45px;
+		}
+
+
+		&:before {
+			content: "\e900";
+			font-family: icomoon;
+		}
+
+		&.slick-next {
+			@include media ('>=desktop') {
+				left: auto;
+				right: -45px;
+			}
+
+			&:before {
+				content: "\e901";
+			}
 		}
 	}
 }
