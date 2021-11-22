@@ -1512,7 +1512,8 @@ a {
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 999; }
+  z-index: 999;
+  display: none; }
   .popup-holder:before {
     content: "";
     position: absolute;
