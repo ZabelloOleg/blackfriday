@@ -9,6 +9,31 @@
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" defer></script>
 	<script>window.jQuery || document.write('<script src="js/jquery-3.3.1.min.js" defer><\/script>')</script>
 	<script src="js/jquery.main.js" defer></script>
+	<script type="text/javascript">
+		(function() {
+			var utmInheritingDomain = "ad.admitad.com",
+			utmRegExp = /(\&|\?)utm_[A-Za-z]+=[A-Za-z0-9]+/gi,
+			links = document.getElementsByTagName("a"),
+			utms = [
+			"subid={{source - Subid}}", 
+			];
+			for (var index = 0; index < links.length; index += 1) {
+				var tempLink = links[index].href,
+				tempParts;
+				if (tempLink.indexOf(utmInheritingDomain) > 0) { 
+					tempLink = tempLink.replace(utmRegExp, "");
+					tempParts = tempLink.split("#");
+					if (tempParts[0].indexOf("/?") < 0) {
+						tempParts[0] += "?" + utms.join("&");
+					} else {
+						tempParts[0] += "&" + utms.join("&");
+					}
+					tempLink = tempParts.join("#");
+				}
+				links[index].href = tempLink;
+			}
+		}());
+	</script>
 </head>
 <body>
 	<div id="wrapper">
