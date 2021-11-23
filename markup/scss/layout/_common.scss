@@ -293,7 +293,7 @@ a {
 
 			&:hover {
 				&:before {
-					opacity: 1;
+					opacity: 0;
 				}
 			}
 
@@ -444,6 +444,22 @@ a {
 		&.telemart {
 			background: linear-gradient(0deg, #484f59, #484f59), #ffffff;
 		}
+
+		&.v-chehle {
+			background: linear-gradient(0deg, #FF6700, #FF6700), #FFFFFF;
+		}
+
+		&.intertop {
+			background: linear-gradient(0deg, #519997, #519997), #FFFFFF;
+		}
+
+		&.aurum {
+			background: linear-gradient(0deg, #5B0021, #5B0021), #FFFFFF;
+		}
+
+		&.gold_ua {
+			background: linear-gradient(0deg, #FBCC1C, #FBCC1C), #FFFFFF;
+		}
 	}
 }
 
@@ -592,6 +608,8 @@ a {
 	}
 
 	button {
+		@include animate(background-color color);
+
 		color: $white;
 		position: absolute;
 		right: 0;
@@ -606,6 +624,12 @@ a {
 		border: none;
 		border-radius: 0 15px 15px 0;
 		box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.1);
+		border: 1px solid #ac8bc9;
+
+		&:hover {
+			background-color: $white;
+			color: #ac8bc9;
+		}
 
 		@include media ('>=tablet') {
 			font-size: 20px;
@@ -824,9 +848,12 @@ a {
 	}
 
 	input[type='submit'] {
-		background: #B12331;
+		@include animate(background-color color);
+
+		background-color: #B12331;
 		box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.07);
 		border-radius: 10px;
+		border: 1px solid #B12331;
 		text-align: center;
 		color: $white;
 		display: block;
@@ -834,7 +861,6 @@ a {
 		padding: 14px 10px;
 		font-size: 13px;
 		text-transform: uppercase;
-		border: none;
 
 		@include media ('>=tablet') {
 			border-radius: 0 15px 15px 0;
@@ -844,6 +870,11 @@ a {
 			bottom: 0;
 			width: 149px;
 			padding: 5px;
+		}
+
+		&:hover {
+			background-color: $white;
+			color: #B12331;
 		}
 	}
 
@@ -858,9 +889,16 @@ a {
 	label {
 		display: flex;
 		align-items: center;
+		cursor: pointer;
 
 		@include media ('>=tablet') {
 			display: block;
+		}
+
+		&:hover {
+			.fake-label {
+				text-decoration: underline;
+			}
 		}
 	}
 
@@ -877,7 +915,6 @@ a {
 		margin-right: 5px;
 
 		@include media ('>=tablet') {
-			position: static;
 			display: inline-block;
 			width: 22px;
 			height: 22px;
@@ -903,13 +940,13 @@ a {
 		& + .fake-input {
 			&:before {
 				content:'';
-				width: 8px;
-				height: 4px;
+				width: 10px;
+				height: 6px;
 				position: absolute;
 				top: 50%;
 				left:50%;
-				border:3px solid #777;
-				border-width:0 0 3px 3px;
+				border:3px solid #B12331;
+				border-width:0 0 2px 2px;
 				opacity: 0;
 				transform: rotate(-45deg);
 				margin:-4px 0 0 -5px;
