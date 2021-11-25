@@ -52,10 +52,16 @@ function initCookie() {
 	var animSpeed = 650;
 	var expires = 1 / 8; // 3 hours (1 / 24 = 1 hour; 1 / 12 = 2 hours)
 
+	jQuery('.newsletter').on('submit', function() {
+		jQuery.cookie('infoPopup', 'true', {
+			expires: 365,
+			path: '/'
+		});
+	});
+
 	jQuery('.popup-holder').each(function() {
 		var popup = jQuery(this);
 		var btnClose = popup.find('.close-popup');
-		var form = popup.find('.newsletter');
 
 		if (!jQuery.cookie('infoPopup')) {
 			setTimeout(function() {
@@ -73,13 +79,6 @@ function initCookie() {
 				e.preventDefault();
 			});
 		}
-
-		form.on('submit', function() {
-			jQuery.cookie('infoPopup', 'true', {
-				expires: 365,
-				path: '/'
-			});
-		});
 	});
 }
 
