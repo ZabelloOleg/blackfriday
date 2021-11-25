@@ -2,10 +2,10 @@
 	//****************************************
 	//edit here
 	$senderName = 'BlackFriday';
-	$senderEmail = '';
+	$senderEmail = 'BlackFriday';
 	$targetEmail = 'zab.oleg.sv@gmail.com';
 	$messageSubject = 'Message from BlackFriday';
-	$redirectToReferer = false;
+	$redirectToReferer = true;
 	$redirectURL = 'thankyou.html';
 	//****************************************
 
