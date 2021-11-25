@@ -111,7 +111,7 @@
 								<li><a data-filter="products" href="#">Продукти</a></li>
 								<li><a data-filter="books" href="#">Книжки</a></li>
 								<li><a data-filter="leisure" href="#">Дозвілля</a></li>
-								<li><a data-filter="everyday-life" href="#">Побут</a></li>
+								<!-- <li><a data-filter="everyday-life" href="#">Побут</a></li> -->
 								<li><a data-filter="goods-for-children" href="#">Товари для дітей</a></li>
 								<li><a data-filter="goods-for-sports" href="#">Товари для спорту</a></li>
 								<li><a data-filter="goods-for-adults" href="#">Товари для дорослих</a></li>
@@ -164,7 +164,7 @@
 							<li data-tags="kasta, каста" data-category="clothes">
 								<a href="#" class="kasta"><img src="images/kasta.png" alt="image description"></a>
 							</li>
-							<li data-tags="nasoloda, насолода" data-category="leisure, goods-for-adults">
+							<li data-tags="nasoloda, насолода" data-category="goods-for-adults">
 								<a href="#"><img src="images/nasoloda.png" alt="image description"></a>
 							</li>
 							<li data-tags="bagland, бегленд" data-category="clothes"><a href="#"><img src="images/bagland.png" alt="image description"></a></li>
@@ -235,16 +235,18 @@
 						<h1 class="title">SALE<span>365</span></h1>
 						<div class="form-holder">
 							<h2>Любиш отримувати все першим?<br>підпишись на розсилку!</h2>
-							<form action="#" class="newsletter">
-								<div class="form-row">
-									<input type="email" placeholder="Просто вкажи свою e-mail адресу">
+							<form action="mail1.php"  method="post" class="newsletter">
+								<div class="form-row validation-row">
+									<input type="email" placeholder="Просто вкажи свою e-mail адресу" data-required="true">
 									<input type="submit" value="відправити">
 								</div>
-								<label for="check-1">
-									<input id="check-1" type="checkbox">
-									<span class="fake-input"></span>
-									<span class="fake-label">Даю згоду на отримання електронної розсилки</span>
-								</label>
+								<div class="validation-row">
+									<label for="check-1">
+										<input id="check-1" type="checkbox" data-required="true">
+										<span class="fake-input"></span>
+										<span class="fake-label">Даю згоду на отримання електронної розсилки</span>
+									</label>
+								</div>
 							</form>
 						</div>
 					</div>
@@ -254,7 +256,7 @@
 		<footer id="footer">
 			<div class="container">
 				<h1>Слідкуй за новинами на нашому телеграм каналі</h1>
-				<a href="https://t.me/sale_365" class="btn-tg">перейти на канал</a>
+				<a href="https://t.me/sale_365" class="btn-tg"> <img src="images/telegram.svg" alt="image description" class="telegram"> перейти на канал</a>
 			</div>
 		</footer>
 		<div id="popup-1" class="popup-holder">
@@ -266,9 +268,9 @@
 					<h1 class="title">Sales <span>365</span></h1>
 					<h2>Любиш отримувати все першим?</h2>
 					<h2>підпишись на розсилку!</h2>
-					<form action="#" class="newsletter">
+					<form action="mail1.php" method="post" class="newsletter">
 						<div class="form-row validation-row">
-							<input type="email" placeholder="Просто вкажи свою e-mail адресу" data-required="true">
+							<input type="email" name="email" placeholder="Просто вкажи свою e-mail адресу" data-required="true">
 							<input type="submit" value="відправити">
 						</div>
 						<div class="validation-row">
