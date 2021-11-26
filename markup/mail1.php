@@ -3,7 +3,7 @@
 	//edit here
 	$senderName = 'BlackFriday';
 	$senderEmail = 'BlackFriday';
-	$targetEmail = 'zab.oleg.sv@gmail.com';
+	$targetEmail = 'Wowshum@ukr.ua';
 	$messageSubject = 'Message from BlackFriday';
 	$redirectToReferer = true;
 	$redirectURL = 'thankyou.html';
